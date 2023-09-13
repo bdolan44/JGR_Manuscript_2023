@@ -1,5 +1,4 @@
 import matplotlib
-#matplotlib.use('agg')
 import h5py
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,7 +6,7 @@ import glob
 import numpy as np
 import imp
 import sys
-#import bottleneck as bn
+
 import oa_stats as OA 
 import analysis_tools as AT
 import xarray as xr
@@ -17,13 +16,8 @@ import scipy.stats as stats
 import scipy
 import pandas
 from matplotlib import colors
-import steiner_houze_yuter_cs as shy
 
 
-try:
-    plt.style.use('presentation')
-except Exception:
-    pass
 import matplotlib as mpl
 from scipy.special import gamma
 
@@ -930,46 +924,6 @@ def plot_eofs(dsd,experiment,extra,pcoption='distribution'):
 
     return fig, ax
     
-#def contour_density(dat,exper,ax):
-#    #histogram definition
-#    xyrange = [[0,6],[0,6]] # data range
-#    bins = [40,40] # number of bins
-#    thresh =7  #density threshold
-#
-#    xdat = np.ravel(dat['d00'])
-#    ydat =np.ravel(dat['nww'])
-#    exper = exper
-#    # histogram the data
-#    hh, locx, locy = scipy.histogram2d(xdat, ydat, range=xyrange, bins=bins)#,normed=True)
-#
-#    posx = np.digitize(xdat, locx)
-#    posy = np.digitize(ydat, locy)
-#
-#
-#    #select points within the histogram
-#    ind = (posx > 0) & (posx <= bins[0]) & (posy > 0) & (posy <= bins[1])
-#    hhsub = hh[posx[ind] - 1, posy[ind] - 1] # values of the histogram where the points are
-#    xdat1 = xdat[ind][hhsub < thresh] # low density points
-#    ydat1 = ydat[ind][hhsub < thresh]
-#    hh[hh < thresh] = np.nan # fill the areas with low density by NaNs
-#    cb = ax.imshow(np.flipud(hh.T)/np.nansum(hh)*100.,cmap='CMRmap',vmin=0.01,vmax=2.0,extent=np.array(xyrange).flatten(),norm=colors.LogNorm(), interpolation='none', origin='upper')
-         
-#    for label in (ax.get_yticklabels()):
-#        label.set_fontsize(18)
-#    for label in (ax.get_xticklabels()):
-#        label.set_fontsize(18)
-
-#    ax.grid(True)
-#    ax.set_xlabel('D$_0$ (mm)',fontsize=20)
-#    ax.set_ylabel('logN$_w$',fontsize=20)
-#    ax.set_title('{e} '.format(e=exper),fontsize=22)
-#    ax.set_ylim(1,6)
-#    ax.set_xlim(0,5)
-#    #plt.plot(xdat1, ydat1, '.',color='darkblue')
-#    plt.savefig('{e}_density_nwdm_norm.png'.format(e=exper),dpi=200)
-#    return cb
-
-
 hid_names = ['Amb','Grp1', 'Grp2', 'Grp3', 'Grp4',
               'Grp5', 'Grp6']
 hid_colors = [ 'grey','Red', 'Green', 'GOld', 'Blue',
@@ -984,14 +938,14 @@ def plot_frequency(groups,ax,thresh):
         except TypeError as tp:
             print( tp)
             v = 0
-        totm.append(np.float(v))
+        totm.append(float(v))
     #print totm
-    totmsum = np.float(np.sum(np.array(totm)))
+    totmsum = float(np.sum(np.array(totm)))
     #print totmsum
     if totmsum > 1:
         tfreq = np.zeros_like(np.array(totm))
         for j in range(0,7):
-            tfreq[j] = np.float(totm[j])/totmsum*100.
+            tfreq[j] = float(totm[j])/totmsum*100.
      #   print tfreq,np.shape(tfreq)
         for i,t in enumerate(tfreq):
             ax.bar(i,t,color=hid_colors[i])
@@ -1010,10 +964,6 @@ def exper_eof(raindata,good_vars,labels):
     dsd.calculate_eofs()
     dsd.set_eof_labels(labels)
     dsd.auto_flip()
-   
-
-    
-    
     return dsd
 
 def make_lognorm(raindata,var):
@@ -1044,7 +994,7 @@ def get_2d_pchist(pc1,pc2,exper,ax, thresh=1.5):
 
 
 
-    cb =ax.imshow(Hmasked.T/np.float(np.sum(Hmasked))*100., interpolation='nearest', origin='lower',
+    cb =ax.imshow(Hmasked.T/float(np.sum(Hmasked))*100., interpolation='nearest', origin='lower',
         extent=[xedges[0], xedges[-1], yedges[0], yedges[-1]],cmap='CMRmap',zorder=10,norm=colors.LogNorm())
 
     cb1 = plt.colorbar(cb,ax = ax,shrink=0.4)
@@ -1054,10 +1004,6 @@ def get_2d_pchist(pc1,pc2,exper,ax, thresh=1.5):
     p = ax.axhline(0, color='k', linestyle='dashed',lw=1,zorder=15)
 
 
-
-
-#    ax.axvline(x=1.5,color='red')
-#    ax.axvline(x=-0.8,color='green')
     for label in (ax.get_xticklabels() + ax.get_yticklabels()):
         label.set_fontsize(15)
 
@@ -1090,8 +1036,6 @@ def get_groups(pc1, pc2, thresh1, thresh2, thresh3, thresh4):
 
         condshal0 = np.logical_and(~whmask,~condcc)
         condshal = np.logical_and(condw,condshal0)
-#        condshal = np.logical_and(conds1,~conds)
-#        condshal1 = np.logical_or(~condshal,whmask)
 
         condstrat1 = np.logical_and(~whmask,~condw)
         condstrat0 = np.logical_and(condstrat1,~condcc)
