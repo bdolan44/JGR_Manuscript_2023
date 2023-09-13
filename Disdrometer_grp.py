@@ -28,7 +28,7 @@ from collections import OrderedDict
 class Disdrometer(object):
     
     def __init__(self,distype='2dvd',color='black',region=0,exper='global',extra='test',loc=0,
-                good_vars=[''],sav=1,thresh1=1.5,thresh2=1.5,thresh3=1.5,thresh4=1.5,pickdir='/Users/bdolan/scratch/PCA_NEW/SIGM_TEST/'):
+                good_vars=[''],sav=1,thresh1=1.5,thresh2=1.5,thresh3=1.5,thresh4=1.5,pickdir='scratch/PCA_NEW/SIGM_TEST/'):
 #        self.pccolors = {'conv': 'red','strat':'green','warm':'orange'}
         labels = {'nww':'N$_w$', 
                   'd00':'D$_0$',
@@ -294,7 +294,7 @@ class Disdrometer(object):
         return subd
 
 
-    def read_raindata(self,sav=1,pdir = '/Users/bdolan/scratch/PCA_NEW/SIGM_TEST/'):
+    def read_raindata(self,sav=1,pdir = 'scratch/PCA_NEW/SIGM_TEST/'):
         print (self.exper)
         if self.exper == 'sgp' or self.exper == 'fin' or self.exper == 'dar' or self.exper == 'man':
             raindata = pickle.load( open( '{s}{ex:}group_raindata.p'.format(ex=self.exper,s=pdir), "rb" ) )

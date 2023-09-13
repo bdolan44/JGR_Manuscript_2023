@@ -122,7 +122,7 @@ nur = mur+1
 
 
 
-namma_names  = sorted(glob.glob(f'/claudian/bdolan/WRF/pickles/{exper}/INTERP/{exper}*interpdat*.p'))
+namma_names  = sorted(glob.glob(f'{exper}/INTERP/{exper}*interpdat*.p'))
 namma_norm = list()
 #print(namma_names)
 
@@ -184,7 +184,7 @@ for n in namma_names:
     dat['lrr'] = make_lognorm(dat, 'rrr')
     dat['llwc'] = make_lognorm(dat, 'lwcc')    
 
-    base_path ='/claudian/bdolan/WRF'
+    base_path ='WRF'
 
     out_filenamesfc = f"{base_path}/pickles/{exper}_dsd_wrf_{time}_skip{hskip}.p"
 

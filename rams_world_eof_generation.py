@@ -60,7 +60,7 @@ except Exception as bpe:
     print ('hit the exception: {}'.format(bpe))
 
 
-cfg = Config.Config('/claudian/bdolan/BASELINE/simulation_settings_baseline3.yaml')
+cfg = Config.Config('simulation_settings_baseline3.yaml')
 ycfg = cfg.v
 
 

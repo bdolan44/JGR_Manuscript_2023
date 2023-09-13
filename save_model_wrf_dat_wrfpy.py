@@ -114,7 +114,7 @@ def make_lognorm(raindata,var):
 exper = 'Thompson_mu1'
 
 
-namma_names  = sorted(glob.glob(f'/claudian/smsaleeb/DOE.MICRO-simulations/NOBAK/doe.wrf.supercell.{exper}/wrfout_d01_*nc'))
+namma_names  = sorted(glob.glob(f'doe.wrf.supercell.{exper}/wrfout_d01_*nc'))
 namma_norm = list()
 
 
@@ -151,102 +151,12 @@ for n in namma_names:
 #     w_cart = wrf.vinterp(ncfile,w,'ght_msl',zinterpH)
     interp_dat = {'qr':qrain_cart,'nr':nr_cart,'mu':mur,'rrt':rrt,'z':zinterpH}#'u':u_cart,'v':v_cart,'w':w_cart}
     
-    base_path ='/claudian/bdolan/WRF'
+    base_path ='WRF'
     out_filename = f"{base_path}/pickles/{exper}_interpdat_wrf_{time}.p"
 
     pickle.dump(interp_dat, open( out_filename, "wb" ) )
     print ('saved {f}'.format(f=out_filename))
 
-#     nwt = np.squeeze(np.zeros_like(qrain_cart[whz,:,:]))
-#     sigmt = np.squeeze(np.zeros_like(qrain_cart[whz,:,:]))
-#     dmt = np.squeeze(np.zeros_like(qrain_cart[whz,:,:]))
-#     lwdt = np.squeeze(np.zeros_like(qrain_cart[whz,:,:]))
-#     d0t = np.squeeze(np.zeros_like(qrain_cart[whz,:,:]))
-#     
-#     #print(np.shape(nwt),whz[0][-1])
-#     print("Starting loop....")
-#     if np.nanmax(qrain_cart)>0.00001:
-#         for t,hg in enumerate((nwt[:,0,0])):
-#             #print('working on time ',t)
-#             for i,xx in enumerate((qrain_cart[0,:,0])):
-#                 for j,yy in enumerate((qrain_cart[0,0,:])):
-#                         #print(qr[t,i,j])
-#                         if qrain_cart[t,i,j]>0.00001:
-#                             #print('coing to calc qr!')
-#                             nwt[t,i,j],sigmt[t,i,j],dmt[t,i,j],lwdt[t,i,j],d0t[t,i,j] = calc_gamma_opt(qrain_cart[t,i,j],nr_cart[t,i,j],mur)
-#     
-#     muu = np.zeros_like(d0t)+mur
-# 
-#     dat = {'d00': np.array(d0t),
-#                  'dmm': np.array(dmt),
-#                  'lwcc': np.array(lwdt),
-#                  'rrr': np.array(rrt),
-#                  'nww': np.array(nw),
-#                  'sigm': np.array(sigm),
-#                  #'ntt': ntsfc[whgd],
-#                  'muu': np.array(muu)}
-# 
-# 
-#     out_filenamesfc = "{b}/pickles/{e}_dsd_wrf_sfc.p".format(b=base_path, e=exper)
-# 
-#     pickle.dump(dat, open( out_filenamesfc, "wb" ) )
-#     print ('saved {f}'.format(f=out_filenamesfc))
-
-#     whgd2 = np.where(d0t>0)
-#     #print(np.shape(whgd2))    
-#     nw.append(nwt)
-#     sigm.append(sigmt)
-#     dm.append(dmt)
-#     lwc.append(lwdt)
-#     d0.append(d0t)
-#     rr.append(rrt)
-
-# print('D0 shape',np.shape(d0))
-# print('RR shape',np.shape(rr))
-# d0=np.squeeze(d0)
-# whgd = np.where(np.array(d0)>0)
-# print(np.shape(d0),np.shape(whgd))
-# whgdsfc = np.squeeze(np.where(np.array(d0)[:,0,:,:]>0))
-# muu = np.zeros_like(d0)+mur
-# 
-# 
-# dat = {'d00': np.array(d0)[whgd],
-#              'dmm': np.array(dm)[whgd],
-#              'lwcc': np.array(lwc)[whgd],
-#              'rrr': np.array(rr)[whgdsfc],
-#              'nww': np.array(nw)[whgd],
-#              'sigm': np.array(sigm)[whgd],
-#              'ntt': ntsfc[whgd],
-#              'muu': np.array(muu)[whgd]}
-# 
-# dat['lrr'] = make_lognorm(dat, 'rrr')
-# dat['llwc'] = make_lognorm(dat, 'lwcc')
-# 
-# base_path ='/claudian/bdolan/RAMS'
-# out_filename = "{b}/pickles/{e}_dsd_wrf_test.p".format(b=base_path, e=exper)
-# pickle.dump(dat, open( out_filename, "wb" ) )
-# print ('saved {f}'.format(f=out_filename))
-# 
-# datsfc = {'d00': np.array(d0)[:,whgdsfc,...],
-#              'dmm': np.array(dm)[:,whgdsfc,...],
-#              'lwcc': np.array(lwc)[:,whgdsfc,...],
-#              'rrr': np.array(rr)[whgdsfc,...],
-#              'nww': np.array(nw)[:,whgdsfc,...],
-#              'sigm': np.array(sigm)[:,whgdsfc,...],
-#              'ntt': ntsfc[whgd],
-#              'muu': np.array(muu)[whgdsfc]}
-# 
-# datsfc['lrr'] = make_lognorm(datsfc, 'rrr')
-# datsfc['llwc'] = make_lognorm(datsfc, 'lwcc')
-# 
-# 
-# 
-# out_filenamesfc = "{b}/pickles/{e}_dsd_wrf_sfc.p".format(b=base_path, e=exper)
-# 
-# pickle.dump(datsfc, open( out_filenamesfc, "wb" ) )
-# print ('saved {f}'.format(f=out_filenamesfc))
-# 
-# 
 
 
 
