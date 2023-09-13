@@ -1,0 +1,1042 @@
+# This will contain the settings/locations/etc of the simulations used 
+
+sims:
+#Grant supercell for nu=1
+  supercell_nu1:
+    shortname:
+      'supercell_nu1'
+    longname:
+      'Grant supercell, nu=1'
+    pubname:
+      'Supercell'
+    nu:
+      '2'
+    rain_file:
+      'supercell-grant-hires-gnu01-300dx-g1-rain.h5'
+    micro_file:
+      'supercell-grant-hires-gnu01-300dx-g1-micro.h5'
+    extra_file:
+      'supercell-grant-hires-gnu01-300dx-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      3
+    dsd_pickle:
+      'supercell_300dx_nu1_dsd.p'
+    color:
+      '#f24005'
+    type:
+      'MC'
+
+#Grant supercell for nu=2
+  supercell_nu2:
+    shortname:
+      'supercell_nu2'
+    longname:
+      'Grant supercell, nu=2'
+    pubname:
+      'Supercell'
+    nu:
+      '2'
+    rain_file:
+      'supercell-grant-hires-gnu02-300dx-g1-rain.h5'
+    micro_file:
+      'supercell-grant-hires-gnu02-300dx-g1-micro.h5'
+    extra_file:
+      'supercell-grant-hires-gnu02-300dx-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      3
+    dsd_pickle:
+      'supercell_300dx_nu2_dsd.p'
+    color:
+      '#f24005'
+    type:
+      'MC'
+#Grant supercell for nu=3
+  supercell_nu3:
+    shortname:
+      'supercell_nu3'
+    longname:
+      'Grant supercell, nu=3'
+    pubname:
+      'Supercell'
+    nu:
+      '3'
+    rain_file:
+      'supercell-grant-hires-gnu03-300dx-g1-rain.h5'
+    micro_file:
+      'supercell-grant-hires-gnu03-300dx-g1-micro.h5'
+    extra_file:
+      'supercell-grant-hires-gnu03-300dx-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      3
+    dsd_pickle:
+      'supercell_300dx_nu3_dsd.p'
+    color:
+      '#f24005'
+    type:
+      'MC'
+      
+      
+#Grant supercell for nu=4
+  supercell_nu4:
+    shortname:
+      'supercell_nu4'
+    longname:
+      'Grant supercell, nu=4'
+    pubname:
+      'Supercell'
+    nu:
+      '4'
+    rain_file:
+      'supercell-grant-hires-gnu04-300dx-g1-rain.h5'
+    micro_file:
+      'supercell-grant-hires-gnu04-300dx-g1-micro.h5'
+    extra_file:
+      'supercell-grant-hires-gnu04-300dx-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      3
+    dsd_pickle:
+      'supercell_300dx_nu4_dsd.p'
+    color:
+      '#f24005'
+    type:
+      'MC'
+
+#Grant supercell for nu=10
+  supercell_nu10:
+    shortname:
+      'supercell_nu10'
+    longname:
+      'Grant supercell, nu=10'
+    pubname:
+      'Supercell'
+    nu:
+      '10'
+    rain_file:
+      'supercell-grant-hires-gnu10-300dx-g1-rain.h5'
+    micro_file:
+      'supercell-grant-hires-gnu10-300dx-g1-micro.h5'
+    extra_file:
+      'supercell-grant-hires-gnu10-300dx-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      3
+    dsd_pickle:
+      'supercell_300dx_nu10_dsd.p'
+    color:
+      '#f24005'
+    type:
+      'MC'
+
+#Grant supercell for nu=10
+  supercell_bin:
+    shortname:
+      'supercell_bin'
+    longname:
+      'Grant supercell, HUCM'
+    pubname:
+      'Supercell'
+    nu:
+      'bin'
+    rain_file:
+      'supercell-grant-hires-hucm-full-300dx-g1-rain.h5'
+    micro_file:
+      'supercell-grant-hires-hucm-full-300dx-g1-micro.h5'
+    extra_file:
+      'supercell-grant-hires-hucm-full-300dx-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      3
+    dsd_pickle:
+      'supercell_300dx_hucm_dsd.p'
+    color:
+      '#f24005'
+    type:
+      'MC'
+
+
+#ATEX warm rain run by SteveS v1
+  atex_nu1:    
+    shortname:
+      'atex_nu1'
+    longname:
+      'ATEX Warm Rain, nu=1'
+    rain_file:
+      'atex-bulk-100-gnu01-g1-rain.h5'
+    micro_file:
+      'atex-bulk-100-gnu01-g1-micro.h5'
+    extra_file:
+      'atex-bulk-100-gnu01-g1-extra1.h5'
+    nu:
+      '1'
+    tskip:
+      1
+    hskip:
+      3
+    dsd_pickle:
+      'atex_nu1_dsd.p'
+    color:
+      '#ffbc42'
+
+#ATEX warm rain run by SteveS v2
+  atex_nu2:    
+    shortname:
+      'atex_nu2'
+    longname:
+      'ATEX Warm Rain, nu=2'
+    rain_file:
+      'atex-bulk-100-gnu02-g1-rain.h5'
+    micro_file:
+      'atex-bulk-100-gnu02-g1-micro.h5'
+    extra_file:
+      'atex-bulk-100-gnu02-g1-extra1.h5'
+    nu:
+      '2'
+    tskip:
+      1
+    hskip:
+      3
+    dsd_pickle:
+      'atex_nu2_dsd.p'
+    color:
+      '#ffbc42'
+
+# ATEX warm rain run by SteveS v3
+  atex_nu3:    
+    shortname:
+      'atex_nu3'
+    longname:
+      'ATEX Warm Rain, nu=3'
+    rain_file:
+      'atex-bulk-100-gnu03-g1-rain.h5'
+    micro_file:
+      'atex-bulk-100-gnu03-g1-micro.h5'
+    extra_file:
+      'atex-bulk-100-gnu03-g1-extra1.h5'
+    nu:
+      '3'
+    tskip:
+      1
+    hskip:
+      3
+    dsd_pickle:
+      'atex_nu3_dsd.p'
+    color:
+      '#ffbc42'
+
+      
+# ATEX warm rain run by SteveS v4
+  atex_nu4:    
+    shortname:
+      'atex_nu4'
+    longname:
+      'ATEX Warm Rain, nu=4'
+    rain_file:
+      'atex-bulk-100-gnu04-g1-rain.h5'
+    micro_file:
+      'atex-bulk-100-gnu04-g1-micro.h5'
+    extra_file:
+      'atex-bulk-100-gnu04-g1-extra1.h5'
+    nu:
+      '4'      
+    tskip:
+      1
+    hskip:
+      3
+    dsd_pickle:
+      'atex_nu4_dsd.p'
+    color:
+      '#ffbc42'
+#      
+# ATEX warm rain run by SteveS v10
+  atex_nu10:    
+    shortname:
+      'atex_nu10'
+    longname:
+      'ATEX Warm Rain, nu=10'
+    rain_file:
+      'atex-bulk-100-gnu10-g1-rain.h5'
+    micro_file:
+      'atex-bulk-100-gnu10-g1-micro.h5'
+    extra_file:
+      'atex-bulk-100-gnu10-g1-extra1.h5'
+    nu:
+      '10'
+    tskip:
+      1
+    hskip:
+      3
+    dsd_pickle:
+      'atex_nu10_dsd.p'
+    color:
+      '#ffbc42'
+#      
+
+# ATEX warm rain run by SteveS HUCM
+  atex_bin:    
+    shortname:
+      'atex_bin'
+    longname:
+      'ATEX Warm Rain, BIN'
+    rain_file:
+      'atex-hucm-100-g1-rain.h5'
+    micro_file:
+      'none'
+    extra_file:
+      'atex-hucm-100-g1-extra1.h5'
+    nu:
+      'BIN'
+    tskip:
+      1
+    hskip:
+      3
+    dsd_pickle:
+      'atex_hucm_dsd.p'
+    color:
+      '#ffbc42'
+#      
+
+  # NAMMA idealized simulation with background aerosols
+  NAMMA_nodust:
+    shortname:
+      'NAMMA_nodust'
+    longname:
+      'NAMMA No Dust'
+    pubname:
+      'NAMMA No Dust'
+    rain_file:
+      'nammaconv-nodust-g1-rain.h5'
+    micro_file:
+      'nammaconv-nodust-g1-micro.h5'
+    extra_file:
+      'nammaconv-nodust-g1-extra1.h5'
+    tskip:
+      1
+    hskip:
+      1
+    dsd_pickle:
+      'NAMMA_nodust_dsd.p'
+    color:
+      '#1446a0'
+    type:
+      'TO'
+
+  # NAMMA idealized simulation with background aerosols
+  NAMMA_dustin:
+    shortname:
+      'NAMMA_dustin'
+    longname:
+      'NAMMA Dust IN'
+    pubname:
+      'NAMMA Dust'
+    rain_file:
+      'nammaconv-dustinonly-g1-rain.h5'
+    micro_file:
+      'nammaconv-dustinonly-g1-micro.h5'
+    extra_file:
+      'nammaconv-dustinonly-g1-extra1.h5'
+    tskip:
+      1
+    hskip:
+      1
+    dsd_pickle:
+      'NAMMA_dustin_dsd.p'
+    color:
+      '#1446a0'
+    type:
+      'TO'
+
+  # NAMMA idealized simulation with background aerosols
+  NAMMA_ccnin:
+    shortname:
+      'NAMMA_ccnin'
+    longname:
+      'NAMMA CCN IN'
+    pubname:
+      'NAMMA CCN'
+    rain_file:
+      'nammaconv-dustccnin-g1-rain.h5'
+    micro_file:
+      'nammaconv-dustccnin-g1-micro.h5'
+    extra_file:
+      'nammaconv-dustccnin-g1-extra1.h5'
+    tskip:
+      1
+    hskip:
+      1
+    dsd_pickle:
+      'NAMMA_ccnin_dsd.p'
+    color:
+      '#1446a0'
+    type:
+      'TO'
+
+
+#  NAMMA idealized simulation with background aerosols
+#  NAMMABG:
+#    shortname:
+#      'NAMMABG'
+#    longname:
+#      'NAMMA Background'
+#    rain_file:
+#      'namma-DustBG-MT-g1-rain.h5'
+#    micro_file:
+#      'namma-DustBG-MT-g1-micro.h5'
+#    extra_file:
+#      'namma-DustBG-MT-g1-extra1.h5'
+#    tskip:
+#      1
+#    hskip:
+#      1
+#    dsd_pickle:
+#      'NAMMABG_dsd.p'
+#    color:
+#      '#1446a0'
+#    type:
+#      'TO'
+
+
+
+
+#  NAMMA idealized simulation with some dust added to assess sensitivities
+#  NAMMADUST:
+#    shortname:
+#      'NAMMADUST'
+#    longname:
+#      'NAMMA DUST LAYER'
+#    rain_file:
+#      'namma-DustCCNIN-MT-g1-rain.h5'
+#    micro_file:
+#      'namma-DustCCNIN-MT-g1-micro.h5'
+#    extra_file:
+#      'namma-DustCCNIN-MT-g1-extra1.h5'
+#    tskip:
+#      1
+#    hskip:
+#      1
+#    dsd_pickle:
+#      'NAMMADUST_dsd.p'
+#    color:
+#      '#1446a0'
+#    type:
+#      'TO'
+#
+#
+#  NAMMAWARM:
+#    shortname:
+#      'NAMMAWARM'
+#    longname:
+#      'NAMMA warm rain only'
+#    rain_file:
+#      'namma-new-warmrain-g1-rain.h5'
+#    micro_file:
+#      'namma-new-warmrain-g1-micro.h5'
+#    extra_file:
+#      'namma-new-warmrain-g1-extra1.h5'
+#    tskip:
+#      1
+#    hskip:
+#      1
+#    dsd_pickle:
+#      'NAMMAWARM_dsd.p'
+#    color:
+#      '#1446a0'
+#    type:
+#      'TO'
+#
+#  NAMMAFULL:
+#    shortname:
+#      'NAMMAFULL'
+#    longname:
+#      'NAMMA full microphysics'
+#    rain_file:
+#      'namma-new-fullmicro-g1-rain.h5'
+#    micro_file:
+#      'namma-new-fullmicro-g1-micro.h5'
+#    extra_file:
+#      'namma-new-fullmicro-g1-extra1.h5'
+#    tskip:
+#      1
+#    hskip:
+#      1
+#    dsd_pickle:
+#      'NAMMAFULL_dsd.p'
+#    color:
+#      '#1446a0'
+#    type:
+#      'TO'
+
+  # May 20, 2011 MC3E MCS convective complex
+  MC3E:
+    shortname:
+      'MC3E'
+    longname:
+      'MC3E 20 May'
+    pubname:
+      'MC3E'
+    rain_file:
+      'mc3e-2011may20-clean-g3-rain.h5'
+    micro_file:
+      'mc3e-2011may20-clean-g3-micro.h5'
+    extra_file:
+      'mc3e-2011may20-clean-g3-extra1.h5'
+    tskip:
+      1
+    hskip:
+      2
+    dsd_pickle:
+      'MC3E_clean_dsd.p'
+    color:
+      '#d81159'
+    type:
+      'MC'
+
+
+
+  # Tornado simulations
+#  TOR1:
+#    shortname:
+#      'TOR1'
+#    longname:
+#      'Supercell $\nu$=1'
+#    rain_file:
+#      'supercell-gnu1-g1-rain.h5'
+#    micro_file:
+#      'supercell-gnu1-g1-micro.h5'
+#    extra_file:
+#      'supercell-gnu1-g1-extra1.h5'
+#    tskip:
+#      1
+#    hskip:
+#      1
+#    dsd_pickle:
+#      'TORv1_dsd.p'
+#    color:
+#      '#8f2d56'
+
+
+
+
+  # Tornado simulations
+#  TOR2:
+#    shortname:
+#      'TOR2'
+#    longname:
+#      'Supercell $\nu$=2'
+#    rain_file:
+#      'supercell-gnu2-g1-rain.h5'
+#    micro_file:
+#      'supercell-gnu2-g1-micro.h5'
+#    extra_file:
+#      'supercell-gnu2-g1-extra1.h5'
+#    tskip:
+#      1
+#    hskip:
+#      1
+#    dsd_pickle:
+#      'TORv2_dsd.p'
+#     color:
+#      '#8f2d56'
+
+  # Tornado simulations
+#  TOR4:
+#    shortname:
+#      'TOR4'
+#    longname:
+#      'Supercell $\nu$=4'
+#    rain_file:
+#      'supercell-gnu4-g1-rain.h5'
+#    micro_file:
+#      'supercell-gnu4-g1-micro.h5'
+#    extra_file:
+#      'supercell-gnu4-g1-extra1.h5'
+#    tskip:
+#      1
+#    hskip:
+#      1
+#    dsd_pickle:
+#      'TORv4_dsd.p'
+#    color:
+#      '#8f2d56'
+
+
+  # CAPPM simulations, used for looking at shedding's effects
+#  CAPPMshed1:
+#    shortname:
+#      'CAPPMshed1'
+#    longname:
+#      'CAPPM shed=1'
+#    rain_file:
+#      'cappm-2011may20-g3-shed1-rain.h5'
+#    micro_file:
+#      ''
+#    extra_file:
+#      'cappm-2011may20-g3-shed1-extra1.h5'
+#    tskip:
+#      2
+#    hskip:
+#      3
+#    dsd_pickle:
+#      'CAPPMshed1_dsd.p'
+#    color:
+#      '#ffbc42'
+
+
+#  CAPPMshed2:
+#    shortname:
+#      'CAPPMshed2'
+#    longname:
+#      'CAPPM shed=2'
+#    rain_file:
+#      'cappm-2011may20-g3-shed2-rain.h5'
+#    micro_file:
+#      ''
+#    extra_file:
+#      'cappm-2011may20-g3-shed2-extra1.h5'
+#    tskip:
+#      2
+#    hskip:
+#      3
+#    dsd_pickle:
+#      'CAPPMshed2_dsd.p'
+#    color:
+#      '#ffbc42'
+
+
+#  CAPPMshed4:
+#    shortname:
+#      'CAPPMshed4'
+#    longname:
+#      'CAPPM shed=4'
+#    rain_file:
+#      'cappm-2011may20-g3-shed4-rain.h5'
+#    micro_file:
+#      ''
+#    extra_file:
+#      'cappm-2011may20-g3-shed4-extra1.h5'
+#    tskip:
+#      2
+#    hskip:
+#      3
+#    dsd_pickle:
+#      'CAPPMshed4_dsd.p'
+#    color:
+#      '#ffbc42'
+
+  BSISO1:
+    shortname:
+      'BSISO1'
+    longname:
+      'BSISO phase 1'
+    pubname:
+      'BSISO1'
+    rain_file:
+      'bsiso-phase1-g1-rain.h5'
+    micro_file:
+      'bsiso-phase1-g1-micro.h5'
+    extra_file:
+      'bsiso-phase1-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      2
+    dsd_pickle:
+      'BSISO1_dsd.p'
+    color:
+      '#73d2de'
+    type:
+      'TO'
+
+
+  BSISO2:
+    shortname:
+      'BSISO2'
+    longname:
+      'BSISO phase 2'
+    pubname:
+      'BSISO2'
+    rain_file:
+      'bsiso-phase2-g1-rain.h5'
+    micro_file:
+      'bsiso-phase2-g1-micro.h5'
+    extra_file:
+      'bsiso-phase2-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      2
+    dsd_pickle:
+      'BSISO2_dsd.p'
+    color:
+      '#73d2de'
+    type:
+      'TO'
+  # BSISO3:
+  #   shortname:
+  #     'BSISO3'
+  #   longname:
+  #     'BSISO phase 3'
+  #   rain_file:
+  #     'bsiso-phase3-g1-rain.h5'
+  #   micro_file:
+  #     'bsiso-phase3-g1-micro.h5'
+
+  #extra_file:
+  #    'bsiso-phase3-g1-extra1.h5'
+  #   tskip:
+  #     1
+  #   hskip:
+  #     1
+  #   dsd_pickle:
+  #     'BSISO3_dsd.p'
+  #   color:
+  #     '#73d2de'
+
+  # BSISO4:
+  #   shortname:
+  #     'BSISO4'
+  #   longname:
+  #     'BSISO phase 4'
+  #   rain_file:
+  #     'bsiso-phase4-g1-rain.h5'
+  #   micro_file:
+  #     'bsiso-phase4-g1-micro.h5'
+
+  #  extra_file:
+  #    'bsiso-phase4-g1-extra1.h5'
+
+  #   tskip:
+  #     1
+  #   hskip:
+  #     1
+  #   dsd_pickle:
+  #     'BSISO4_dsd.p'
+  #   color:
+  #     '#73d2de'
+
+#  BSISO5:
+#    shortname:
+#      'BSISO5'
+#    longname:
+#      'BSISO phase 5'
+#    rain_file:
+#      'bsiso-phase5-g1-rain.h5'
+#    micro_file:
+#      'bsiso-phase5-g1-micro.h5'
+#
+#    extra_file:
+#      'bsiso-phase5-g1-extra1.h5'      
+#    tskip:
+#      1
+#    hskip:
+#      1
+#    dsd_pickle:
+#      'BSISO5_dsd.p'
+#    color:
+#      '#73d2de'
+#    type:
+#      'TO'
+
+  BSISO6:
+    shortname:
+      'BSISO6'
+    longname:
+      'BSISO phase 6'
+    pubname:
+      'BSISO6'
+    rain_file:
+      'bsiso-phase6-g1-rain.h5'
+    micro_file:
+      'bsiso-phase6-g1-micro.h5'
+
+    extra_file:
+      'bsiso-phase6-g1-extra1.h5'      
+    tskip:
+      2
+    hskip:
+      2
+    dsd_pickle:
+      'BSISO6_dsd.p'
+    color:
+      '#73d2de'
+    type:
+      'TO'
+
+  # BSISO7:
+  #   shortname:
+  #     'BSISO7'
+  #   longname:
+  #     'BSISO phase 7'
+  #   rain_file:
+  #     'bsiso-phase7-g1-rain.h5'
+  #   micro_file:
+  #     'bsiso-phase7-g1-micro.h5'
+
+  #  extra_file:
+  #    'bsiso-phase1-g1-extra1.h5'
+
+  #   tskip:
+  #     1
+  #   hskip:
+  #     1
+  #   dsd_pickle:
+  #     'BSISO7_dsd.p'
+  #   color:
+  #     '#73d2de'
+
+  BSISO8:
+    shortname:
+      'BSISO8'
+    longname:
+      'BSISO phase 8'
+    pubname:
+      'BSISO8'
+    rain_file:
+      'bsiso-phase8-g1-rain.h5'
+    micro_file:
+      'bsiso-phase8-g1-micro.h5'
+    extra_file:
+      'bsiso-phase8-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      2
+    dsd_pickle:
+      'BSISO8_dsd.p'
+    color:
+      '#73d2de'
+    type:
+      'TO'
+
+  tropconvlin:
+    shortname:
+      'tropconvlin'
+    longname:
+      'Tropical convection - linear'
+    pubname:
+      'Trop Lin'
+    rain_file:
+      'tropconv-ctllin-g1-rain.h5'
+    micro_file:
+      'tropconv-ctllin-g1-micro.h5'
+    extra_file:
+      'tropconv-ctllin-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      2
+    dsd_pickle:
+      'tropconvlin_dsd.p'
+    color:
+      '#218380'
+    type:
+      'TO'
+
+  tropconvclst:
+    shortname:
+      'tropconvclst'
+    longname:
+      'Tropical convection - clustered'
+    pubname:
+      'Trop Clust'
+    rain_file:
+      'tropconv-ctlclst-g1-rain.h5'
+    micro_file:
+      'tropconv-ctlclst-g1-micro.h5'
+    extra_file:
+      'tropconv-ctlclst-g1-extra1.h5'
+    tskip:
+      2
+    hskip:
+      2
+    dsd_pickle:
+      'tropconvclst_dsd.p'
+    color:
+      '#218380'
+    type:
+      'TO'
+
+  seabreezectl:
+    shortname:
+      'seabreezectl'
+    longname:
+      'Sea breeze - control'
+    pubname:
+      'Breeze Ctl'
+    rain_file:
+      'seabreeze-ctl-g1-rain.h5'
+    micro_file:
+      'seabreeze-ctl-g1-micro.h5'
+    extra_file:
+      'seabreeze-ctl-g1-extra1.h5'
+    tskip:
+      1
+    hskip:
+      1
+    dsd_pickle:
+      'seabreezectl_dsd.p'
+    color:
+      '#1567D8'
+    type:
+      'TC'
+
+  seabreezepoll:
+    shortname:
+      'seabreezepoll'
+    longname:
+      'Sea breeze - polluted'
+    pubname:
+      'Breeze Pol'
+    rain_file:
+      'seabreeze-cpoll-g1-rain.h5'
+    micro_file:
+      'seabreeze-cpoll-g1-micro.h5'
+    extra_file:
+      'seabreeze-cpoll-g1-extra1.h5'
+    tskip:
+      1
+    hskip:
+      1
+    dsd_pickle:
+      'seabreezepoll_dsd.p'
+    color:
+      '#1567D8'
+    type:
+      'TC'
+
+
+vars: # here we'll put some info about variables we're using
+  nww:
+    label:
+      'logN$_w$'
+    lims:
+      [2, 8]
+    longname:
+      'Log of the intercept parameter'    
+
+  d00:
+    label:
+      'D$_0$'
+    lims:
+      [0, 5]
+    longname:
+      'Mean mass drop diameter'
+
+  dmm:
+    label:
+      'D$_m$'
+    lims:
+      [0, 5]
+    longname:
+      'Median drop diameter'
+
+
+  sigm:
+    label:
+      '$\sigma_{m}$'
+    lims:
+      [0, 10]
+    longname:
+      'Standard deviation'
+
+  llwc:
+    label:
+      'logLWC'
+    lims:
+      [0, 5]
+    longname:
+      'Liquid water content'
+
+  lrr:
+    label:
+      'logRR'
+    lims:
+      [0, 4]
+    longname:
+      'Rain rate'
+
+  lnt:
+    label:
+      'logNtt'
+    lims:
+      [1, 5]
+    longname:
+      'Total drops'
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
